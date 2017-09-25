@@ -26,4 +26,4 @@ Test:
 
 More:
 
-http://fullybaked.co.uk/articles/installing-latest-vim-on-centos-from-source
+<http://fullybaked.co.uk/articles/installing-latest-vim-on-centos-from-source>
