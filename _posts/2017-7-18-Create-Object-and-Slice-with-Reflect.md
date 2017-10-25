@@ -14,7 +14,5 @@ func AnySlice(objType reflect.Type) {
   obj.FieldByName("Age").SetInt(18)
   
   // append to slice
-  objArr = reflect.Append(objArr, obj)
+  objArr.Set(reflect.Append(objArr, obj))
   ```
-
-<https://stackoverflow.com/questions/37939388/how-can-i-add-elements-to-slice-reflection>
