@@ -16,5 +16,5 @@ func myFun(model interface{}){
     newChild.Field(i).SetInt(0)
     m.Set(reflect.Append(m, newChild))
   }
-
+}
 ```
