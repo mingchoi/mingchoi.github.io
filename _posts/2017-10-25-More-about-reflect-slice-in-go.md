@@ -9,7 +9,7 @@ func myFun(model interface{}){
   m := refelct.Indirect(reflect.ValueOf(model))
   type := m.Type()
   
-  // Get 
+  // Get Child type, create and append
   if t.Kind() == reflect.Slice{
     childType := t.Elem()
     newChild = reflect.ValueOf(reflect.New(reflect.TypeOf(childType)).Interface()).Elem()
