@@ -3,6 +3,8 @@ layout: post
 title: Get active window with Autohotkey
 ---
 
+## How
+
 Pack this .ahk script to .exe
 ```
 WinGet, process, ProcessName, A
@@ -15,12 +17,14 @@ Run it
 GetActiveProcess.exe | more
 ```
 
+## More
+
 Get active window title
 ```
 WinGetTitle, title, A
 FileAppend, "%title%
 ExitApp
-``
+```
 
 Get full process list
 ```
