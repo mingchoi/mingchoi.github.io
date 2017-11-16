@@ -3,7 +3,7 @@ layout: post
 title: Get active window with Autohotkey
 ---
 
-## How
+## How it works
 
 Pack this .ahk script to .exe
 ```
@@ -17,7 +17,7 @@ Run it
 GetActiveProcess.exe | more
 ```
 
-## More
+## More feature
 
 Get active window title
 ```
@@ -38,4 +38,39 @@ Loop, %windows%
     FileAppend, %process% %title%`n, *
 }
 ExitApp
+```
+
+## Full script
+```
+Loop, %0%
+{
+    param := %A_Index%
+    break
+}
+
+if (param=="activeprocess")
+{
+    WinGet, process, processName, A
+    FileAppend, %process%, *
+}
+
+if (param=="activetitle")
+{
+    WinGetTitle, title, A
+    FileAppend, %title%, *
+}
+
+if (param=="all")
+{
+    WinGet, windows, list
+    Loop, %windows%
+    {
+        id := windows%A_Index%
+        WinGet, process, ProcessName, ahk_id %id%
+        WinGetTitle, title, ahk_id %id%
+        FileAppend, %process%:%title%`n, *
+    }
+}
+
+ExitApp 
 ```
