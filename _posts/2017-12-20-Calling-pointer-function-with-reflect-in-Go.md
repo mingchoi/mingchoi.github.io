@@ -20,7 +20,7 @@ func main() {
 	scanTel := reflect.New(TelephoneType).Elem()
   
   // Conversion failed, message: "panic: interface conversion: main.Telephone is not sql.Scanner: missing method Scan"
-	// scanTel.Interface().(sql.Scanner).Scan(66666666)
+  // scanTel.Interface().(sql.Scanner).Scan(66666666)
   
   // Use reflect.Value.Addr() to obtain a pointer value representing the address of scanTel
   scanTel.Addr().Interface().(sql.Scanner).Scan(66666666)
