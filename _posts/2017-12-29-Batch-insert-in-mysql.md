@@ -18,4 +18,5 @@ LOAD DATA INFILE 'data.csv'
 (Remember to skip the primary key)
 
 To improve performance, disable foreign key check:
+
 ```set foreign_key_checks = 0;```
