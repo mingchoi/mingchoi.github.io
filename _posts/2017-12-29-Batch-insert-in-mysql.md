@@ -17,4 +17,6 @@ LOAD DATA INFILE 'data.csv'
 ```
 (Remember to skip the primary key)
 
-To improve performance, disable foreign key check: `set foreign_key_checks = 0;`
+To improve performance, disable foreign key check: `SET foreign_key_checks = 0;`
+
+Use `SELECT @@foreign_key_checks;` to check the status of foreign_key_checks
