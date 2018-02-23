@@ -6,7 +6,7 @@ title: More about reflect slice in go
 ```
 func myFun(model interface{}){
   // Get type
-  m := refelct.Indirect(reflect.ValueOf(model))
+  m := reflect.Indirect(reflect.ValueOf(model))
   type := m.Type()
   
   // Get Child type, create and append
