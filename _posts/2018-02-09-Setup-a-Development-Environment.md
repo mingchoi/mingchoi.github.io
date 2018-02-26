@@ -21,6 +21,6 @@ title: Setup a Development Environment
 
 ## 6. Install MySQL in docker
 ```
-sudo docker run --name mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:latest
+sudo docker run --name mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -p 3306:3306 -d mysql:latest
 sudo docker run --name phpmyadmin -d --link mysql:db -p 8000:80 phpmyadmin/phpmyadmin
 ```
