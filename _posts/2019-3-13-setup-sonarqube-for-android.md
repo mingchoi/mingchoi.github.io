@@ -14,7 +14,7 @@ This tutorial is going to setup SonarQube on local and config scanner in Android
 - Open [http://localhost:9000](http://localhost:9000) to see if server is up
 
 ## Setup SonarQube
-- Login by admin:admin
+- Login by `admin:admin`
 
 SonarQube already provided build-in Quality Gates called "Sonar way".
 
