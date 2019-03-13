@@ -20,7 +20,7 @@ SonarQube already provided build-in Quality Gates called "Sonar way".
 
 You can install more plug-in in Administration page.
 
-## Config project
+## Config project scanner
 - Open build.gradle(app) and add:
 ```
 apply plugin: "org.sonarqube"
@@ -46,3 +46,8 @@ dependencies {
     classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.6.1"
 }
 ```
+
+## Run scan task
+- Open terminal and run `gradlew sonarqube` to start scanning.
+- Project will be created automatically on SonarQube.
+- Open [http://localhost:9000](http://localhost:9000) to see the report
